@@ -11,6 +11,11 @@ To start Neovim inside the container and work on your current project, run:
 
 `docker run -it --rm -v "$(pwd)":/usr/app/projects -w /usr/app/projects nvim-container`
 
+## alias in .bashrc
+
+Because the command to start the container is too long for me I added an alias to my .bashrc file.
+`alias nvimc='docker run -it --rm -v "$(pwd)":/usr/app/projects -w /usr/app/projects nvim-container
+
 # nvim
 
 ## Used plugins

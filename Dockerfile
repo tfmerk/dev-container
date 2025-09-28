@@ -17,8 +17,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     nodejs \
     npm \
     ripgrep \
-	fd-find \
-	build-essential \
+    fd-find \
+    build-essential \
     && rm -rf /var/lib/apt/lists/*
 
 # Make fd available as "fd" (Debian names it fdfind)
@@ -40,8 +40,6 @@ COPY nvim_config/init.lua /home/dev/.config/nvim/
 RUN chown -R dev:dev /home/dev/.config/nvim/
 
 USER dev
-WORKDIR /home/dev
-
 
 
 CMD ["nvim"]
